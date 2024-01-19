@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #define pi 3.14
+
 float cuboid_volume(float a, float b, float c) {
     return(a*b*c);
 }
@@ -40,11 +41,20 @@ void roller_volume_sevice(){
 
 
 int main(){
+    int choice;
+
+    printf("Obliczyc objetosc prostopadloscianu(1) czy walca(2):\n");
+    scanf("%d", &choice);
+
+    if (choice==1){
     cuboid_volume_service();
+    }
+
+    else if (choice==2){
     roller_volume_sevice();
+    }
+
     return 0;
-
-
 }
 
 
