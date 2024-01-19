@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <math.h>
-
-float cuboid_field(float a, float b, float c) {
+#define pi 3.14
+float cuboid_volume(float a, float b, float c) {
     return(a*b*c);
 }
 
-void cuboid_field_service(){
+float roller_volume(float r, float h){
+    return(pi*(r*r)*h);
+}
+
+void cuboid_volume_service(){
     float a, b, c;
 
     printf("Podaj wartosc a:");
@@ -17,13 +21,27 @@ void cuboid_field_service(){
     printf("Podaj wartosc c:");
     scanf("%f", &c);
 
-    printf("Pole prostopadloscianu: %f\n", cuboid_field(a,b,c));
+    printf("Pole prostopadloscianu: %f\n", cuboid_volume(a,b,c));
 
 }
 
-int main(){
-    cuboid_field_service();
+void roller_volume_sevice(){
+    float r, h;
 
+    printf("Podaj wartosc r:");
+    scanf("%f", &r);
+
+    printf("Podaj wartosc h:");
+    scanf("%f", &h);
+
+    printf("Objetosc walca: %f\n", roller_volume(r,h));
+
+}
+
+
+int main(){
+    cuboid_volume_service();
+    roller_volume_sevice();
     return 0;
 
 
