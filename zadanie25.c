@@ -38,9 +38,7 @@ void roller_volume_sevice(){
     printf("Objetosc walca: %f\n", roller_volume(r,h));
 
 }
-
-
-int main(){
+void menu(){
     int choice;
 
     printf("Obliczyc objetosc prostopadloscianu(1) czy walca(2):\n");
@@ -53,6 +51,15 @@ int main(){
     else if (choice==2){
     roller_volume_sevice();
     }
+    else{
+        printf("Niepoprawna wartosc");
+        menu();
+    }
+}
+
+int main(){
+
+    menu();
 
     return 0;
 }
